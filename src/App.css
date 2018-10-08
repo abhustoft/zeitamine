@@ -8,7 +8,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: grey;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -29,4 +29,12 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+.husTak {
+  stroke: rgb(0, 39, 118);
+  stroke-width: 3px;
+  opacity: 1;
+  /*fill: black;*/
 }

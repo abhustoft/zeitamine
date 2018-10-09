@@ -6,18 +6,18 @@ import anime from "animejs";
 class App extends Component {
 
     componentDidMount() {
-        anime({
-            targets: 'p',
-            translateX: [
-                {value: 100, duration: 1200},
-                {value: 0, duration: 800}
-            ],
-            rotate: '1turn',
-            backgroundColor: '#111',
-            color: '#444',
-            duration: 2000,
-            loop: false
-        });
+        // anime({
+        //     targets: 'p',
+        //     translateX: [
+        //         {value: 100, duration: 1200},
+        //         {value: 0, duration: 800}
+        //     ],
+        //     rotate: '1turn',
+        //     backgroundColor: '#111',
+        //     color: '#444',
+        //     duration: 2000,
+        //     loop: false
+        // });
 
         anime({
             targets: ['.husTak, .husVegger'],
@@ -55,19 +55,7 @@ class App extends Component {
                         <path className={'husTak'}    fill="#002776" d="M11.2,98.7l-0.8-1c-1-1.2-0.8-3,0.5-4l40.4-31.9c2.1-1.7,5.1-1.6,7.1,0.1l5.4,4.4v-0.8 c0-3.1,2.5-5.7,5.7-5.7h11.2c3.1,0,5.7,2.5,5.7,5.7v19.2l11.2,9c1.2,1,1.4,2.8,0.4,4l-0.8,1c-1,1.2-2.8,1.4-4,0.4L79.2,88.1V66.8 h-8.5v14.2L54.7,68L15.2,99.2C14,100.2,12.2,100,11.2,98.7z"/>
                         <path className={'husVegger'} fill="#002776" d="M79.3,99.3v34.3H28.9V99.7l-7,5.5v29.7c0,3.1,2.5,5.7,5.7,5.7h53.1c3.1,0,5.7-2.5,5.7-5.7V105L79.3,99.3z"/>
                     </svg>
-                    <p className={'hererjeg'}> her er er jeg</p>
-                    <img src={logo} className="App-logo" alt="logo"/>
-                    <p>
-                        Edit <code>src/App.js</code> and save to reload.
-                    </p>
-                    <a
-                        className="App-link"
-                        href="https://reactjs.org"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Learn React
-                    </a>
+
                 </header>
             </div>
         );

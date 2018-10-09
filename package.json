@@ -107,5 +107,9 @@
     "presets": [
       "react-app"
     ]
+  },
+  "devDependencies": {
+    "gsap": "^2.0.2",
+    "react-svg-loader": "^2.1.0"
   }
 }

@@ -8,7 +8,7 @@
 }
 
 .App-header {
-  background-color: grey;
+  /*background-color: grey;*/
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -33,8 +33,8 @@
 
 
 .husTak {
-  stroke: rgb(0, 39, 118);
-  stroke-width: 3px;
-  opacity: 1;
+  /*stroke: rgb(0, 39, 118);*/
+  /*stroke-width: 3px;*/
+  /*opacity: 1;*/
   /*fill: black;*/
 }

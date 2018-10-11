@@ -22,19 +22,17 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.house {
+  /*position: relative;*/
+  background: azure;
 }
-
-
-.husTak {
-  /*stroke: rgb(0, 39, 118);*/
-  /*stroke-width: 3px;*/
-  /*opacity: 1;*/
-  /*fill: black;*/
+.gotsometext {
+  color: black;
+}
+.dropdown {
+  /*position: relative;*/
+  overflow: hidden;
+  color: purple;
+  background-color: beige;
+  /*height: 0;*/
 }

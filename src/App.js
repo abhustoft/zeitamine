@@ -1,28 +1,10 @@
 import React, {Component} from 'react';
-import TweenMax, {Power0, Bounce, Elastic} from "gsap/TweenMax";
+import TweenMax, {Elastic} from "gsap/TweenMax";
 
 import './App.css';
-import HouseClouds from './svg/house_and_clouds.svg';
-
+import House from './House';
 
 class App extends Component {
-
-    componentDidMount() {
-        TweenMax.fromTo('.cloud1', 38, {x: -100}, {
-            x: 350,
-            delay: 1,
-            repeat: -1,
-            repeatDelay: 2,
-            ease: Power0.easeNone
-        });
-        TweenMax.fromTo('.cloud2', 55, {x: -50}, {
-            x: 350,
-            delay: 20,
-            repeat: -1,
-            repeatDelay: 4,
-            ease: Power0.easeNone
-        });
-    }
 
     render() {
 
@@ -43,7 +25,7 @@ class App extends Component {
         return (
             <div className="App">
                 <header className="App-header">
-                    <HouseClouds className={'house'}/>
+                    <House />
                     <div className={'expander'}>
                         <button className={'button closed'} onClick={toggle}>
                             Button
@@ -58,6 +40,6 @@ class App extends Component {
                 </header>
             </div>)
     }
-};
+}
 
 export default App;

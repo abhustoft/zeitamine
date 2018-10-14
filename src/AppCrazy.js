@@ -5,7 +5,7 @@ import './App.css';
 import HouseClouds from './svg/house_and_clouds.svg';
 
 
-class App extends Component {
+class AppCrazy extends Component {
 
     componentDidMount() {
         TweenMax.to('.plen1', 3, {x:100});
@@ -42,4 +42,4 @@ class App extends Component {
     }
 }
 
-export default App;
+export default AppCrazy;

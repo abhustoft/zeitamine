@@ -22,35 +22,42 @@ class App extends Component {
             repeatDelay: 4,
             ease: Power0.easeNone
         });
-        TweenMax.from('.dropdown', 2, {ease: Elastic.easeOut, delay: 7, css: {height: 0}});
-        TweenMax.to('.dropdown', 0.4, {ease: Elastic.noEase, delay: 12, css: {height: 0}});
-
-        // TweenMax.fromTo('.dropdown', 2, {css:{height:0}}, {ease:Elastic.easeOut,delay: 3, css:{height:100}});
-        // TweenMax.fromTo('.dropdown', 2, {css:{height:100}}, {ease:Elastic.easeOut,delay: 5, css:{height:0}});
-
-
     }
 
     render() {
+
+        const toggle = (e) => {
+            const classes = e.currentTarget.classList;
+            const content = document.getElementsByClassName('content');
+
+            if(!classes.contains('closed')) {
+                TweenMax.to(content, 0.5, {height:0});
+                classes.toggle("closed");
+            } else {
+                TweenMax.set(content, { ease: Elastic.easeOut, height:"auto"});
+                TweenMax.from(content, 2, { ease: Elastic.easeOut, height:0});
+                classes.toggle("closed");
+            }
+        };
+
         return (
             <div className="App">
                 <header className="App-header">
                     <HouseClouds className={'house'}/>
-                    <div className={'dropdown'}>
-                        <div>Drop down text</div>
-                        <div>Drop down text</div>
-                        <div>Drop down text</div>
-                    </div>
-                    <div className={'gotsometext'}>
-                        <div>Got some text</div>
-                        <div>Got some text</div>
-                        <div>Got some text</div>
-                        <div>Got some text</div>
+                    <div className={'expander'}>
+                        <button className={'button closed'} onClick={toggle}>
+                            Button
+                        </button>
+                        <div className={'content'}>
+                            <div>Got some text</div>
+                            <div>Got some text</div>
+                            <div>Got some text</div>
+                            <div>Got some text</div>
+                        </div>
                     </div>
                 </header>
-            </div>
-        );
+            </div>)
     }
-}
+};
 
 export default App;

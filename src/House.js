@@ -32,8 +32,10 @@ class House extends Component {
             .fromTo('.building2', 1.5, {y: 80}, {ease: Elastic.easeOut, y: 0}, '-=1.2')
             .fromTo('.building4', 1.5, {y: 80}, {ease: Elastic.easeOut, y: 0}, '-=1.4')
             .fromTo('.building3', 1.5, {y: 80}, {ease: Elastic.easeOut, y: 0}, '-=0.7')
-            .fromTo('.building5window1', 1.5, {y: 80}, {ease: Elastic.easeOut, y: 0}, '-=0.7')
-            .fromTo('.building5window2', 1.5, {y: 80}, {ease: Elastic.easeOut, y: 0}, '-=0.8');
+            .fromTo('.building5window1', 1.5, {y: -80}, {ease: Elastic.easeOut, y: 0}, '-=0.7')
+            .fromTo('.building5window2', 1.5, {y: -80}, {ease: Elastic.easeOut, y: 0}, '-=0.8')
+            .set('.bush', {x: '85%', y: '100%'}, '-=2.5')
+            .fromTo('.bush', 1, {scale: 0}, {ease: Elastic.easeOut, transformOrigin: 'bottom right', scale: 1}, '-=2.5');
     }
 
     render() {

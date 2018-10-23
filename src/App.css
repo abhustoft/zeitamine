@@ -1,19 +1,31 @@
 .App {
-  text-align: center;
-}
-
-.App-header {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
 }
 
 .house {
   background: azure;
 }
+
+svg {
+    width: 90vw;
+    height: auto;
+}
+
+.check {
+    display: none;
+}
+
+.check-circle {
+    display: none;
+}
+
+
+
+
 
 .expander {
   cursor:pointer;
@@ -43,9 +55,4 @@
   text-align: center;
   text-decoration: none;
   width: 100%;
-}
-
-svg {
-    width: 90vw;
-    height: auto;
 }

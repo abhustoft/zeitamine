@@ -24,16 +24,16 @@ class House extends Component {
             ease: Power0.easeNone
         });
 
-        const buildings = new TimelineMax({delay: 10});
+        const buildings = new TimelineMax({delay: 1});
         buildings
-            .fromTo('.building5', 1.5, {y: 80}, {ease: Elastic.easeOut, y: 0}, '+=1')
-            .fromTo('.building6', 1.5, {y: 80}, {ease: Elastic.easeOut, y: 0}, '-=1')
-            .fromTo('.building1', 1.5, {y: 80}, {ease: Elastic.easeOut, y: 0}, '+=1')
-            .fromTo('.building2', 1.5, {y: 80}, {ease: Elastic.easeOut, y: 0}, '-=1')
-            .fromTo('.building4', 1.5, {y: 80}, {ease: Elastic.easeOut, y: 0}, '-=2')
-            .fromTo('.building3', 1.5, {y: 80}, {ease: Elastic.easeOut, y: 0}, '-=2')
-            .fromTo('.building5window1', 1.5, {y: 80}, {ease: Elastic.easeOut, y: 0}, '-=1')
-            .fromTo('.building5window2', 1.5, {y: 80}, {ease: Elastic.easeOut, y: 0}, '-=1');
+            .fromTo('.building5', 1.5, {y: 80}, {ease: Elastic.easeOut, y: 0}, '+=0.2')
+            .fromTo('.building6', 1.5, {y: 80}, {ease: Elastic.easeOut, y: 0}, '-=1.2')
+            .fromTo('.building1', 1.5, {y: 80}, {ease: Elastic.easeOut, y: 0}, '-=0.3')
+            .fromTo('.building2', 1.5, {y: 80}, {ease: Elastic.easeOut, y: 0}, '-=1.2')
+            .fromTo('.building4', 1.5, {y: 80}, {ease: Elastic.easeOut, y: 0}, '-=1.4')
+            .fromTo('.building3', 1.5, {y: 80}, {ease: Elastic.easeOut, y: 0}, '-=0.7')
+            .fromTo('.building5window1', 1.5, {y: 80}, {ease: Elastic.easeOut, y: 0}, '-=0.7')
+            .fromTo('.building5window2', 1.5, {y: 80}, {ease: Elastic.easeOut, y: 0}, '-=0.8');
     }
 
     render() {

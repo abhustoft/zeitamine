@@ -26,17 +26,17 @@ class App extends Component {
             <div className="App">
                 <header className="App-header">
                     <House />
-                    <div className={'expander'}>
-                        <button className={'button closed'} onClick={toggle}>
-                            Button
-                        </button>
-                        <div className={'content'}>
-                            <div>Got some text</div>
-                            <div>Got some text</div>
-                            <div>Got some text</div>
-                            <div>Got some text</div>
-                        </div>
-                    </div>
+                    {/*<div className={'expander'}>*/}
+                        {/*<button className={'button closed'} onClick={toggle}>*/}
+                            {/*Button*/}
+                        {/*</button>*/}
+                        {/*<div className={'content'}>*/}
+                            {/*<div>Got some text</div>*/}
+                            {/*<div>Got some text</div>*/}
+                            {/*<div>Got some text</div>*/}
+                            {/*<div>Got some text</div>*/}
+                        {/*</div>*/}
+                    {/*</div>*/}
                 </header>
             </div>)
     }

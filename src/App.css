@@ -44,3 +44,8 @@
   text-decoration: none;
   width: 100%;
 }
+
+svg {
+    width: 90vw;
+    height: auto;
+}

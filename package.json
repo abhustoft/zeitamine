@@ -110,6 +110,7 @@
   },
   "devDependencies": {
     "gsap": "^2.0.2",
+    "now": "^11.4.6",
     "react-svg-loader": "^2.1.0"
   }
 }

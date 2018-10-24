@@ -30,7 +30,7 @@ class House extends Component {
             .fromTo('.building6', 1.5, {y: 80}, {ease: Elastic.easeOut, y: 0}, '-=1.2')
             .fromTo('.building1', 1.5, {y: 80}, {ease: Elastic.easeOut, y: 0}, '-=0.3')
             .fromTo('.building2', 1.5, {y: 80}, {ease: Elastic.easeOut, y: 0}, '-=1.2')
-            .fromTo('.building4', 1.5, {y: 80}, {ease: Elastic.easeOut, y: 0}, '-=1.4')
+            .fromTo('.building4', 1.5, {y: 90}, {ease: Elastic.easeOut, y: 0}, '-=1.4')
             .fromTo('.building3', 1.5, {y: 80}, {ease: Elastic.easeOut, y: 0}, '-=0.7')
             .fromTo('.building5window1', 1.5, {y: -80}, {ease: Elastic.easeOut, y: 0}, '-=0.7')
             .fromTo('.building5window2', 1.5, {y: -80}, {ease: Elastic.easeOut, y: 0}, '-=0.8')

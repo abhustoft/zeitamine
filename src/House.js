@@ -24,62 +24,44 @@ class House extends Component {
             ease: Power0.easeNone
         });
 
+        const windows = (building, count) => {
+          const windows =  new Array(count);
+          return windows.fill('j').map((value, index) => `.building${building}window${index+1}`)
+        };
+
         const buildings = new TimelineMax({delay: 1});
+        const build1wind = windows(1, 6);
+        const build2wind = windows(2, 4);
+        const build3wind = windows(3, 4);
+        const build4wind = windows(4, 6);
+        const build5wind = windows(5, 4);
+        const build6wind = windows(6, 6);
+        const treeTrunks = ['.tree1trunk','.tree2trunk','.tree3trunk'];
+        const treeCrowns = ['.tree1crown','.tree2crown','.tree3crown'];
+
         buildings
-            .fromTo('.building5',        1.5, {y: 80}, {ease: Elastic.easeOut, y: 0})
-            .fromTo('.building5window1', 1.5, {y: -60}, {ease: Elastic.easeOut, y: 0}, '-=0.7')
-            .fromTo('.building5window2', 1.5, {y: -60}, {ease: Elastic.easeOut, y: 0}, '-=1.5')
-            .fromTo('.building5window3', 1.5, {y: -60}, {ease: Elastic.easeOut, y: 0}, '-=1.4')
-            .fromTo('.building5window4', 1.5, {y: -60}, {ease: Elastic.easeOut, y: 0}, '-=1.3')
-            .fromTo('.building6',        1.5, {y: 80}, {ease: Elastic.easeOut, y: 0}, '-=2.7')
-            .fromTo('.building6window1', 1.5, {y: -60}, {ease: Elastic.easeOut, y: 0}, '-=3')
-            .fromTo('.building6window2', 1.5, {y: -60}, {ease: Elastic.easeOut, y: 0}, '-=1.7')
-            .fromTo('.building6window3', 1.5, {y: -60}, {ease: Elastic.easeOut, y: 0}, '-=1.4')
-            .fromTo('.building6window4', 1.5, {y: -60}, {ease: Elastic.easeOut, y: 0}, '-=1.3')
-            .fromTo('.building6window5', 1.5, {y: -60}, {ease: Elastic.easeOut, y: 0}, '-=1.3')
-            .fromTo('.building6window6', 1.5, {y: -60}, {ease: Elastic.easeOut, y: 0}, '-=1.3')
-            .fromTo('.building1', 1.5, {y: 80},  {ease: Elastic.easeOut, y: 0}, '-=1.8')
-            .fromTo('.building1window1', 1.5, {y: -60}, {ease: Elastic.easeOut, y: 0}, '-=2.5')
-            .fromTo('.building1window2', 1.5, {y: -60}, {ease: Elastic.easeOut, y: 0}, '-=1.7')
-            .fromTo('.building1window3', 1.5, {y: -60}, {ease: Elastic.easeOut, y: 0}, '-=1.4')
-            .fromTo('.building1window4', 1.5, {y: -60}, {ease: Elastic.easeOut, y: 0}, '-=1.3')
-            .fromTo('.building1window5', 1.5, {y: -60}, {ease: Elastic.easeOut, y: 0}, '-=1.3')
-            .fromTo('.building1window6', 1.5, {y: -60}, {ease: Elastic.easeOut, y: 0}, '-=1.3')
-            .fromTo('.building2', 1.5, {y: 80},  {ease: Elastic.easeOut, y: 0}, '-=2.2')
-            .fromTo('.building2window1', 1.5, {y: -60}, {ease: Elastic.easeOut, y: 0}, '-=0.7')
-            .fromTo('.building2window2', 1.5, {y: -60}, {ease: Elastic.easeOut, y: 0}, '-=1.5')
-            .fromTo('.building2window3', 1.5, {y: -60}, {ease: Elastic.easeOut, y: 0}, '-=1.4')
-            .fromTo('.building2window4', 1.5, {y: -60}, {ease: Elastic.easeOut, y: 0}, '-=1.3')
-            .fromTo('.building4', 1.5, {y: 90},  {ease: Elastic.easeOut, y: 0}, '-=2.4')
-            .fromTo('.building4window1', 1.5, {y: -60}, {ease: Elastic.easeOut, y: 0}, '-=1.7')
-            .fromTo('.building4window2', 1.5, {y: -60}, {ease: Elastic.easeOut, y: 0}, '-=1.5')
-            .fromTo('.building4window3', 1.5, {y: -60}, {ease: Elastic.easeOut, y: 0}, '-=1.4')
-            .fromTo('.building4window4', 1.5, {y: -60}, {ease: Elastic.easeOut, y: 0}, '-=1.3')
-            .fromTo('.building4window1', 1.5, {y: -60}, {ease: Elastic.easeOut, y: 0}, '-=2.5')
-            .fromTo('.building4window2', 1.5, {y: -60}, {ease: Elastic.easeOut, y: 0}, '-=1.7')
-            .fromTo('.building4window3', 1.5, {y: -60}, {ease: Elastic.easeOut, y: 0}, '-=1.4')
-            .fromTo('.building4window4', 1.5, {y: -60}, {ease: Elastic.easeOut, y: 0}, '-=1.3')
-            .fromTo('.building4window5', 1.5, {y: -60}, {ease: Elastic.easeOut, y: 0}, '-=1.3')
-            .fromTo('.building4window6', 1.5, {y: -60}, {ease: Elastic.easeOut, y: 0}, '-=1.3')
-            .fromTo('.building3', 1.5, {y: 80},  {ease: Elastic.easeOut, y: 0}, '-=2.7')
-            .fromTo('.building3window1', 1.5, {y: -60}, {ease: Elastic.easeOut, y: 0}, '-=2.7')
-            .fromTo('.building3window2', 1.5, {y: -60}, {ease: Elastic.easeOut, y: 0}, '-=1.5')
-            .fromTo('.building3window3', 1.5, {y: -60}, {ease: Elastic.easeOut, y: 0}, '-=1.4')
-            .fromTo('.building3window4', 1.5, {y: -60}, {ease: Elastic.easeOut, y: 0}, '-=1.3')
-            .fromTo('.walls',      .2, {y: 80},  {ease: Elastic.noease, y: 0}, '-=1.7')
-            .fromTo('.door',       .2, {y: 80},  {ease: Elastic.noease, y: 0}, '-=1.5')
-            .fromTo('.window',     .2, {scale: 0},  {ease: Elastic.noease, scale: 1}, '-=.5')
-            .fromTo('.roof',      .6, {y: -80}, {ease: Bounce.easeOut, y: 0}, '-=1.5')
-            .fromTo('.chimney',   .6, {y: -80}, {ease: Bounce.easeOut, y: 0}, '-=1.5')
-            .fromTo('.doorknob',  1.5, {y: 50},  {ease: Elastic.easeOut, y: 0}, '+=.5')
+            .from('.building5',      1.5, {y:  80, ease: Elastic.easeOut})
+            .staggerFrom(build5wind, 1.5, {y: -60, ease: Elastic.easeOut}, 0.2, '-=1')
+            .from('.building6',      1.5, {y:  80, ease: Elastic.easeOut}, '-=2.7')
+            .staggerFrom(build6wind, 1.5, {y: -60, ease: Elastic.easeOut}, 0.2, '-=1.7')
+            .from('.building1',      1.5, {y:  80, ease: Elastic.easeOut}, '-=1.8')
+            .staggerFrom(build1wind, 1.5, {y: -60, ease: Elastic.easeOut}, 0.2, '-=1.3')
+            .from('.building2',      1.5, {y:  80, ease: Elastic.easeOut}, '-=2.2')
+            .staggerFrom(build2wind, 1.5, {y: -60, ease: Elastic.easeOut}, 0.2, '-=1.5')
+            .from('.building4',      1.5, {y:  90, ease: Elastic.easeOut}, '-=2.4')
+            .staggerFrom(build4wind, 1.5, {y: -60, ease: Elastic.easeOut}, 0.2, '-=1.3')
+            .from('.building3',      1.5, {y:  80, ease: Elastic.easeOut}, '-=2.7')
+            .staggerFrom(build3wind, 1.5, {y: -60, ease: Elastic.easeOut}, 0.2, '-=2.4')
+            .from('.walls',    0.2, {y: 80,  ease: Elastic.noease}, '-=1.7')
+            .from('.door',     0.2, {y: 80,  ease: Elastic.noease}, '-=1.5')
+            .from('.window',   0.2, {scale: 0,  ease: Elastic.noease}, '-=.5')
+            .from('.roof',     0.6, {y: -80, ease: Bounce.easeOut}, '-=1.5')
+            .from('.chimney',  0.6, {y: -80, ease: Bounce.easeOut}, '-=1.5')
+            .from('.doorknob', 1.5, {y: 50,  ease: Elastic.easeOut}, '+=.5')
             .set('.bush', {x: '85%', y: '100%'}, '-=2.9')
-            .fromTo('.bush',         1, {scale: 0}, {ease: Elastic.easeOut, transformOrigin: 'bottom right', scale: 1}, '-=2.9')
-            .fromTo('.tree1trunk', 0.3, {y: 50},    {ease: Power0.easeOut, y: 0}, '-=2.6')
-            .fromTo('.tree2trunk', 0.3, {y: 50},    {ease: Power0.easeOut, y: 0}, '-=2.6')
-            .fromTo('.tree3trunk', 0.3, {y: 50},    {ease: Power0.easeOut, y: 0}, '-=2.6')
-            .fromTo('.tree1crown', 1,   {scale: 0}, {ease: Elastic.easeOut, scale: 1}, '-=2.5')
-            .fromTo('.tree2crown', 1,   {scale: 0}, {ease: Elastic.easeOut, scale: 1}, '-=2.5')
-            .fromTo('.tree3crown', 1,   {scale: 0}, {ease: Elastic.easeOut, scale: 1}, '-=2.5');
+            .fromTo('.bush', 1, {scale: 0}, {ease: Elastic.easeOut, transformOrigin: 'bottom right', scale: 1}, '-=2.9')
+            .staggerFrom(treeTrunks, 0.3, {y: 50, ease: Power0.easeOut}, 0.1, '-=2.8')
+            .staggerFrom(treeCrowns, 1.0, {scale: 0, ease: Elastic.easeOut}, 0.1, '-=2.7');
     }
 
     render() {

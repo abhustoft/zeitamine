@@ -2,8 +2,8 @@ import React, {Component} from 'react';
 import TweenMax, {Power0, Bounce, Elastic} from "gsap/TweenMax";
 import TimelineMax from 'gsap/TimelineMax';
 
-import './App.css';
-import HouseSVG from './svg/house_and_clouds.svg';
+import '../App.css';
+import HouseSVG from '../svg/house_and_clouds.svg';
 
 class House extends Component {
     componentDidMount() {

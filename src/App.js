@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './App.css';
-import House from './House';
+import House from './components/House';
+import SPEye from './components/SPeye';
 
 class App extends Component {
     render() {
@@ -8,6 +9,7 @@ class App extends Component {
             <div className="App">
                 <h1 className="App-title">Welcome to React</h1>
                 <House/>
+                <SPEye/>
             </div>)
     }
 }

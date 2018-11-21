@@ -8,7 +8,7 @@ import SPeyeSVG from '../svg/speye.svg';
 class SPEye extends Component {
     componentDidMount() {
 
-        TweenMax.to(['.innerEye'], 2, {
+        TweenMax.to(['.innerEye'], 18, {
             skewY: "-50deg",
             skewX: "-60deg",
             scale: 0,

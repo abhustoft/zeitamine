@@ -8,11 +8,11 @@ import ClipperBottom from '../svg/clipperBottom.svg';
 class Clipper extends Component {
     componentDidMount() {
 
-        TweenMax.to(['.theSquare'], 4, {
+        TweenMax.to(['.circleMask'], 4, {
             // scale: 0,
             delay: 1,
             x: -110,
-            // y: 11,
+            y: -110,
             repeat: -1,
             // repeatDelay: 2,
             ease: Power0.easeNone,

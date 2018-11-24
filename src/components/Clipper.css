@@ -1,4 +1,7 @@
 .clipper {
     position: absolute;
-
+    width: 50px;
+}
+.clipperBottom {
+    width: 50px;
 }

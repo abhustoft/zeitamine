@@ -10,7 +10,7 @@ class App extends Component {
             <div className="App">
                 <h1 className="App-title">Welcome to React</h1>
                 <House/>
-                <Clipper/>
+                {/*<Clipper/>*/}
                 <SPEye />
             </div>)
     }

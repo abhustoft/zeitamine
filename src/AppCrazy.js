@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import TweenMax, {Bounce, Power0} from "gsap/TweenMax";
+import TweenMax, {Power0} from "gsap/TweenMax";
 
 import './App.css';
 import HouseClouds from './svg/house_and_clouds.svg';

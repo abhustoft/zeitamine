@@ -1,13 +1,11 @@
 import React, {Component} from 'react';
-import TweenMax, {Power0, Bounce, Elastic} from "gsap/TweenMax";
-import TimelineMax from 'gsap/TimelineMax';
+import TweenMax, {Power0} from "gsap/TweenMax";
 
 import '../App.css';
 import SPeyeSVG from '../svg/speye.svg';
 
 class SPEye extends Component {
     componentDidMount() {
-
         TweenMax.to(['.innerEye'], 18, {
             skewY: "-50deg",
             skewX: "-60deg",

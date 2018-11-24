@@ -1,17 +1,31 @@
 import React, {Component} from 'react';
-import TweenMax from "gsap/TweenMax";
+import TweenMax, {Power0} from "gsap/TweenMax";
 
-import '../App.css';
+import './Clipper.css';
 import ClipperSVG from '../svg/clipper.svg';
+import ClipperBottom from '../svg/clipperBottom.svg';
 
 class Clipper extends Component {
     componentDidMount() {
-        TweenMax.to("#theSquare", 1, {attr:{x:0},repeat:-1, yoyo:true});
+
+        TweenMax.to(['.theSquare'], 4, {
+            // scale: 0,
+            delay: 1,
+            x: -110,
+            // y: 11,
+            repeat: -1,
+            // repeatDelay: 2,
+            ease: Power0.easeNone,
+            // yoyo:true,
+        });
     }
 
     render() {
         return (
-            <ClipperSVG className={'clipper'}/>
+            <div className='circle'>
+                <ClipperSVG className={'clipper'}/>
+                <ClipperBottom className={'clipperBottom'}/>
+            </div>
         )
     }
 }

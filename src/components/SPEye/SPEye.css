@@ -1,16 +1,16 @@
-.speye {
+.pupil {
     position: relative;
     height: auto;
     width: 100%;
     top: -100%;
 }
 
-.speyeBottom {
+.eyeBall {
     height: auto;
     width: 100%;
 }
 
-.SPeye {
+.SPEye {
     height: 100%;
     width: 100%;
 }

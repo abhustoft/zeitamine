@@ -1,17 +1,16 @@
 import React, {Component} from 'react';
 import './App.css';
 import House from './components/House';
-import Clipper from './components/Clipper';
-import SPEye from './components/SPeye';
+import SPEye from './components/SPEye/SPeye';
 
 class App extends Component {
     render() {
         return (
             <div className="App">
-                <h1 className="App-title">Welcome to React</h1>
                 <House/>
-                {/*<Clipper/>*/}
-                <SPEye />
+                <div className='blueBox'>
+                    <SPEye/>
+                </div>
             </div>)
     }
 }

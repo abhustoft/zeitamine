@@ -1,0 +1,16 @@
+.speye {
+    position: relative;
+    height: auto;
+    width: 100%;
+    top: -100%;
+}
+
+.speyeBottom {
+    height: auto;
+    width: 100%;
+}
+
+.SPeye {
+    height: 100%;
+    width: 100%;
+}

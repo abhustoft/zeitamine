@@ -1,3 +1,8 @@
+.SPEye {
+    height: 100%;
+    width: 100%;
+}
+
 .pupil {
     position: relative;
     height: auto;
@@ -7,10 +12,5 @@
 
 .eyeBall {
     height: auto;
-    width: 100%;
-}
-
-.SPEye {
-    height: 100%;
     width: 100%;
 }

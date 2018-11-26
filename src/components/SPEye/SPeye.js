@@ -2,8 +2,8 @@ import React, {Component} from 'react';
 import {Power0} from "gsap/TweenMax";
 
 import './SPEye.css';
-import SPEyeSVG from './speye.svg';
-import SPEyeBottom from "./speyeBottom.svg";
+import SPEyePupil from './SPEyePupil.svg';
+import SPEyeBall from "./SPEyeBall.svg";
 import TimelineMax from "gsap/TimelineMax";
 
 
@@ -36,8 +36,8 @@ class SPEye extends Component {
     render() {
         return (
             <div className='SPEye' onClick={this.blink}>
-                <SPEyeBottom className={'eyeBall'}/>
-                <SPEyeSVG className={'pupil'}/>
+                <SPEyeBall className={'eyeBall'}/>
+                <SPEyePupil className={'pupil'}/>
             </div>
         )
     }

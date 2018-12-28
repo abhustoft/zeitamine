@@ -59,6 +59,10 @@
     height: 50vw;
 }
 
+.content {
+    height: 30px;
+}
+
 /*nav {*/
     /*animation: nav 0.2s ease-in-out forwards;*/
     /*display: flex;*/

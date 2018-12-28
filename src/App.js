@@ -4,18 +4,24 @@ import {TransitionGroup, Transition} from "react-transition-group";
 import {play, exit} from './timelines'
 import './App.css';
 import Nav from './Nav'
-// import House from './components/House';
-// import SPEye from './components/SPEye/SPeye';
+import House from './components/House';
+import SPEye from './components/SPEye/SPeye';
 
-const dull = () => (<h1>
-    <div>dull</div>
-</h1>);
-const full = () => (<h1>
-    <div>full</div>
-</h1>);
-const hull = () => (<h1>
-    <div>hull</div>
-</h1>);
+// From: https://css-tricks.com/animating-between-views-in-react/
+
+const full = () => (
+    <h1>
+        <h2 className='content'>Title</h2>
+        <div className='content--inner'>content--inner</div>
+        <div className='content--inner'>content--inner</div>
+        <div className='content--inner'>content--inner</div>
+    </h1>
+);
+const home = () => (
+    <h1>
+        <div>home</div>
+    </h1>
+);
 
 class App extends Component {
     render() {
@@ -44,9 +50,10 @@ class App extends Component {
                                     timeout={{enter: 750, exit: 150}}
                                 >
                                     <Switch location={pathname}>
-                                        <Route exact path="/" component={dull}/>
-                                        <Route path="/eye" component={full}/>
-                                        <Route path="/house" component={hull}/>
+                                        <Route exact path="/" component={home}/>
+                                        <Route path="/eye" component={SPEye}/>
+                                        <Route path="/full" component={full}/>
+                                        <Route path="/house" component={House}/>
                                     </Switch>
                                 </Transition>
                             </TransitionGroup>

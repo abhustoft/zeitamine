@@ -35,9 +35,11 @@ class SPEye extends Component {
 
     render() {
         return (
-            <div className='SPEye' onClick={this.blink}>
-                <SPEyeBall className={'eyeBall content'}/>
-                <SPEyePupil className={'pupil content--inner'}/>
+            <div className='eyeBox'>
+                <div className='SPEye' onClick={this.blink}>
+                    <SPEyeBall className={'eyeBall content'}/>
+                    <SPEyePupil className={'pupil content--inner'}/>
+                </div>
             </div>
         )
     }

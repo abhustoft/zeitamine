@@ -9,17 +9,21 @@ import SPEye from './components/SPEye/SPeye';
 
 // From: https://css-tricks.com/animating-between-views-in-react/
 
-const full = () => (
+const BottomUp = () => (
     <h1>
-        <h2 className='content'>Title</h2>
-        <div className='content--inner'>content--inner</div>
-        <div className='content--inner'>content--inner</div>
-        <div className='content--inner'>content--inner</div>
+        <h2 className='content'>From bottom</h2>
+        <div className='content--inner'>From</div>
+        <div className='content--inner'>the</div>
+        <div className='content--inner'>bottom</div>
+        <div className='content--inner'>up</div>
     </h1>
 );
-const home = () => (
+const FromSide = () => (
     <h1>
+        <div>Home</div>
+        <div>sweet</div>
         <div>home</div>
+        <div>Alabama</div>
     </h1>
 );
 
@@ -32,27 +36,19 @@ class App extends Component {
                     <Route render={(location) => {
                         const key = location.location.key;
                         const pathname = location.location;
-                        console.log('Route render pathname:', pathname)
-                        console.log('Route render key:', key)
                         return (
                             <TransitionGroup component={null}>
                                 <Transition
                                     key={key}
                                     appear={true}
-                                    onEnter={(node, appears) => {
-                                        console.log('onEnter');
-                                        return play(pathname, node, appears)
-                                    }}
-                                    onExit={(node, appears) => {
-                                        console.log('onExit');
-                                        exit(node, appears)
-                                    }}
+                                    onEnter={(node, appears) => play(pathname, node, appears)}
+                                    onExit={(node, appears) => exit(node, appears)}
                                     timeout={{enter: 750, exit: 150}}
                                 >
                                     <Switch location={pathname}>
-                                        <Route exact path="/" component={home}/>
+                                        <Route exact path="/" component={FromSide}/>
+                                        <Route path="/full" component={BottomUp}/>
                                         <Route path="/eye" component={SPEye}/>
-                                        <Route path="/full" component={full}/>
                                         <Route path="/house" component={House}/>
                                     </Switch>
                                 </Transition>

@@ -63,12 +63,21 @@
     height: 30px;
 }
 
-/*nav {*/
-    /*animation: nav 0.2s ease-in-out forwards;*/
-    /*display: flex;*/
-    /*justify-content: space-between;*/
-    /*margin: 0 auto;*/
-    /*max-width: 30em;*/
-    /*opacity: 0;*/
-    /*padding: 3em;*/
-/*}*/
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 30em;
+    padding: 3em;
+}
+
+nav a {
+    color: white;
+    font-weight: 700;
+    margin: 0 2em;
+    letter-spacing: 0.08em;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+}

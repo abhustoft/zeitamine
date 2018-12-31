@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 const routes = [
-  { to: '/', label: 'Home' },
+  { to: '/', label: 'From side' },
   { to: '/full', label: 'Full' },
   { to: '/eye', label: 'SPEye' },
   { to: '/house', label: 'House' }

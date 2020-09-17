@@ -8,8 +8,6 @@ import House from './components/House';
 import SPEye from './components/SPEye/SPeye';
 
 // From: https://css-tricks.com/animating-between-views-in-react/
-// Dummy commit
-
 const BottomUp = () => (
     <h1>
         <h2 className='content'>From bottom</h2>
